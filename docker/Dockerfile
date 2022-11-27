@@ -88,7 +88,7 @@ WORKDIR /app
 RUN chown ${USER}:${USER} ./configs /app && \
     cat ./powerdnsadmin/default_config.py ./configs/docker_config.py > ./powerdnsadmin/docker_config.py
 
-EXPOSE 80/tcp
+EXPOSE 39800/tcp
 USER ${USER}
 HEALTHCHECK CMD ["wget","--output-document=-","--quiet","--tries=1","http://127.0.0.1/"]
 ENTRYPOINT ["entrypoint.sh"]
