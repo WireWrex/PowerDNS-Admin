@@ -20,7 +20,7 @@ spec:
         - name: powerdnsadmin
           image: ngoduykhanh/powerdns-admin
           ports:
-            - containerPort: 80
+            - containerPort: 39800
               protocol: TCP
           envFrom:
             - configMapRef:
